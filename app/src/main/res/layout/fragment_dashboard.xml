@@ -10,6 +10,7 @@
         android:id="@+id/bg_dash"
         android:layout_width="453dp"
         android:layout_height="748dp"
+        android:layout_margin="0sp"
         android:src="@drawable/dashboard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
