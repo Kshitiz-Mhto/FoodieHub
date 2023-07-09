@@ -4,9 +4,9 @@ import com.example.foodapp.modal.category.FoodCategory
 import retrofit2.Response
 import retrofit2.http.GET
 
-abstract class CategoryService {
+interface CategoryService {
 
-    @GET("/categories.php")
+    @GET("/api/json/v1/1/categories.php")
     abstract suspend fun getCategory(): Response<FoodCategory>
 
 }
