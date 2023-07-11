@@ -13,8 +13,8 @@ import com.example.foodapp.modal.category.FoodCategory
 import org.w3c.dom.Text
 import retrofit2.Response
 
-class MyRecyclerViewAdaptor(val catList: ListIterator<Category>) : RecyclerView.Adapter<MyViewHolder>() {
-
+class MyRecyclerViewAdaptor(val catList: List<Category>) : RecyclerView.Adapter<MyViewHolder>() {
+    var i = 0
     private lateinit var retService: CategoryService
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -24,12 +24,12 @@ class MyRecyclerViewAdaptor(val catList: ListIterator<Category>) : RecyclerView.
     }
 
     override fun getItemCount(): Int {
-        return 14
+        return catList.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
-        holder.myTextView.text = catList.next().strCategory
+        holder.myTextView.text = catList[i].strCategory
+        i++
     }
 }
 

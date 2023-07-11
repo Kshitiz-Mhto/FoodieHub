@@ -48,7 +48,7 @@ class DashboardFragment : Fragment() {
             emit(response)
         }
         responseLiveData.observe(this, Observer {
-            val foodList = it.body()?.categories?.listIterator()
+            val foodList = it.body()?.categories
             if (foodList != null) {
                 recyclerView.adapter = MyRecyclerViewAdaptor(foodList)
             }
