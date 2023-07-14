@@ -13,21 +13,23 @@
 
     <Button
         android:id="@+id/btn_home"
-        android:layout_width="289dp"
-        android:layout_height="77dp"
+        android:layout_width="291dp"
+        android:layout_height="60dp"
+        android:background="@drawable/home_button"
         android:clickable="true"
         android:elevation="8dp"
+        android:fontFamily="cursive"
         android:text="Are you Hungry 😋"
         android:textAlignment="center"
         android:textColor="#DFCC1E"
-        android:textSize="27sp"
+        android:textSize="30sp"
         app:cornerRadius="12dp"
-        android:background="@drawable/home_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.91" />
+        app:layout_constraintVertical_bias="0.908" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

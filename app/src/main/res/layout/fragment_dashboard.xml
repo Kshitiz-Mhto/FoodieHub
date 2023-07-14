@@ -87,7 +87,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Starter"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -99,7 +100,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Chicken"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -111,7 +113,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Lamb"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -123,7 +126,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Pasta"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -135,7 +139,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Pork"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -147,7 +152,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Seafood"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -159,7 +165,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Sides"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -171,7 +178,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Beef"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -183,7 +191,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Vegan"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -195,7 +204,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Vegetarian"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -207,7 +217,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Breakfast"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -219,7 +230,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Goat"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -230,7 +242,8 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:text="Dessert"
-                android:textColor="#130101"
+                android:textAlignment="center"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -240,12 +253,48 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:textAlignment="center"
                 android:background="@android:color/transparent"
                 android:text="Miscellaneous"
-                android:textColor="#130101"
+                android:textColor="#FB2658"
                 android:textSize="17sp"
                 android:textStyle="bold" />
         </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="0dp"
+        android:layout_height="285dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="30dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="380dp"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <Button
+                android:id="@+id/food1"
+                android:layout_width="381dp"
+                android:layout_height="285dp"
+                android:alpha="0.25"
+                android:color="#DDFAFAFB"
+                app:cornerRadius="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </HorizontalScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
