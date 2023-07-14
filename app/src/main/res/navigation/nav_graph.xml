@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/push_down_in"
+            app:popExitAnim="@anim/slide_up" />
     </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
