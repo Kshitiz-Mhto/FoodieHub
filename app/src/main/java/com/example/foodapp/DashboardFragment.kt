@@ -22,6 +22,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.foodapp.modal.category.Category
+import okhttp3.internal.toImmutableList
 
 
 class DashboardFragment : Fragment() {
@@ -40,23 +41,22 @@ class DashboardFragment : Fragment() {
         retService = RetrofitInstance.getRetrofitInstance().create(CategoryService::class.java)
         binding = FragmentDashboardBinding.inflate(inflater,container, false)
 
-        val recyclerView = binding.dashRecyclerView
-        recyclerView.setBackgroundColor(Color.TRANSPARENT)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        val responseLiveData: LiveData<Response<FoodCategory>> = liveData {
-            val response = retService.getCategory()
-            emit(response)
-        }
-        responseLiveData.observe(this, Observer {
-            val foodList = it.body()?.categories
-            if (foodList != null) {
-                recyclerView.adapter = MyRecyclerViewAdaptor(foodList)
-            }
-        })
-
-        print("************************************88")
-
+        val recyclerView = binding.dashCategory
+//        recyclerView.setBackgroundColor(Color.TRANSPARENT)
 //        getRequestWithParameters()
+//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+//        val responseLiveData: LiveData<Response<FoodCategory>> = liveData {
+//            val response = retService.getCategory()
+//            emit(response)
+//        }
+//        responseLiveData.observe(this, Observer {
+//            val foodList = it.body()?.categories?.toImmutableList()
+//            if (foodList != null) {
+////                recyclerView.adapter = MyRecyclerViewAdaptor(foodList)
+//
+//            }
+//        })
+
         return binding.root
     }
 
@@ -66,12 +66,12 @@ class DashboardFragment : Fragment() {
             val response = retService.getCategory()
             emit(response)
         }
-//        responseLiveData.observe(this, Observer {
-//            val foodList = it.body()?.categories?.listIterator()
-//            if (foodList != null) {
-//                return foodList
-//            }
-//        })
+        responseLiveData.observe(this, Observer {
+            val foodList = it.body()?.categories?.listIterator()
+            if (foodList != null) {
+//                foodList
+            }
+        })
 //        return null
 
 //        var cat_view0  = binding.catThumb0

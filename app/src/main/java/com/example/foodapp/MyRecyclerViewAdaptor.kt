@@ -24,11 +24,11 @@ class MyRecyclerViewAdaptor(val catList: List<Category>) : RecyclerView.Adapter<
     }
 
     override fun getItemCount(): Int {
-        return catList.size
+        return catList.size-1
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.myTextView.text = catList[i].strCategory
+        holder.myTextView.text = catList.get(i).strCategory
         i++
     }
 }
