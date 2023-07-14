@@ -86,7 +86,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:text="Beef"
+                android:text="Starter"
                 android:textColor="#130101"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -98,7 +98,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:text="Chicker"
+                android:text="Chicken"
                 android:textColor="#130101"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -170,7 +170,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:text="Starter"
+                android:text="Beef"
                 android:textColor="#130101"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -229,7 +229,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
-                android:text="cat"
+                android:text="Dessert"
                 android:textColor="#130101"
                 android:textSize="17sp"
                 android:textStyle="bold" />
