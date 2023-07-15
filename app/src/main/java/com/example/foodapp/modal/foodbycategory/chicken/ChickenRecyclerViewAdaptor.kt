@@ -1,4 +1,4 @@
-package com.example.foodapp
+package com.example.foodapp.modal.foodbycategory.chicken
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,11 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.foodapp.endpoints.CategoryService
-import com.example.foodapp.modal.foodbycategory.starter.Meal
+import com.example.foodapp.R
 
-class MyRecyclerViewAdaptor(val starterList: List<Meal>) : RecyclerView.Adapter<MyViewHolder>() {
-    private lateinit var retService: CategoryService
+class ChickenRecyclerViewAdaptor(val chickenList: List<Meal>?) : RecyclerView.Adapter<MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflator = LayoutInflater.from(parent.context)
@@ -20,11 +18,11 @@ class MyRecyclerViewAdaptor(val starterList: List<Meal>) : RecyclerView.Adapter<
     }
 
     override fun getItemCount(): Int {
-        return starterList.size
+        return chickenList!!.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var index_element = starterList[position]
+        var index_element = chickenList!![position]
         Glide.with(holder.view.context)
             .load(index_element.strMealThumb)
             .into(holder.myImageView)
@@ -32,10 +30,7 @@ class MyRecyclerViewAdaptor(val starterList: List<Meal>) : RecyclerView.Adapter<
     }
 }
 
-class MyViewHolder(val view:View): RecyclerView.ViewHolder(view){
+class MyViewHolder(val view: View): RecyclerView.ViewHolder(view){
     val myTextView = view.findViewById<TextView>(R.id.tvFood)
     val myImageView = view.findViewById<ImageView>(R.id.etImage)
 }
-
-
-
