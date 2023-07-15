@@ -7,9 +7,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
@@ -17,17 +14,16 @@ import com.example.foodapp.databinding.FragmentDashboardBinding
 import com.example.foodapp.modal.RetrofitInstance
 import com.example.foodapp.modal.category.FoodCategory
 import retrofit2.Response
-import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bumptech.glide.Glide
 import com.example.foodapp.endpoints.CategoryService
-import com.example.foodapp.modal.category.Category
+import com.example.foodapp.endpoints.FoodsByCategory
+import com.example.foodapp.modal.foodbycategory.starter.Starter
 import okhttp3.internal.toImmutableList
 
 
 class DashboardFragment : Fragment() {
     private lateinit var retService: CategoryService
+    private lateinit var retfoodsByCategory: FoodsByCategory
     private lateinit var binding: FragmentDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,25 +36,49 @@ class DashboardFragment : Fragment() {
     ): View? {
 
         retService = RetrofitInstance.getRetrofitInstance().create(CategoryService::class.java)
+        retfoodsByCategory = RetrofitInstance.getRetrofitInstance().create(FoodsByCategory::class.java)
         binding = FragmentDashboardBinding.inflate(inflater,container, false)
 
-        val recyclerView = binding.dashCategory
-//        recyclerView.setBackgroundColor(Color.TRANSPARENT)
+        val recyclerView = binding.dashRecyclerview
+//        getStarterwithoutparameter()
+
+        recyclerView.setBackgroundColor(Color.TRANSPARENT)
 //        getRequestWithParameters()
-//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-//        val responseLiveData: LiveData<Response<FoodCategory>> = liveData {
-//            val response = retService.getCategory()
-//            emit(response)
-//        }
-//        responseLiveData.observe(this, Observer {
-//            val foodList = it.body()?.categories?.toImmutableList()
-//            if (foodList != null) {
-////                recyclerView.adapter = MyRecyclerViewAdaptor(foodList)
-//
-//            }
-//        })
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        val responseLiveData: LiveData<Response<Starter>> = liveData {
+            val response = retfoodsByCategory.getStarter()
+            emit(response)
+        }
+        responseLiveData.observe(this, Observer {
+            val foodList = it.body()?.meals?.toImmutableList()
+            if (foodList != null) {
+                recyclerView.adapter = MyRecyclerViewAdaptor(foodList)
+
+            }
+        })
 
         return binding.root
+    }
+
+    private fun getStarterwithoutparameter(){
+        val responseLiveData: LiveData<Response<Starter>> = liveData {
+            val response = retfoodsByCategory.getStarter()
+//            println(response.body())
+//            println("0000000000000000000000000000000000")
+            emit(response)
+        }
+
+        responseLiveData.observe(this, Observer {
+            val starterList = it.body()?.meals?.listIterator()
+            print(starterList)
+            Log.i("MYTAGS", starterList.toString())
+            if (starterList != null) {
+//                binding..text = starterList.next().strMeal
+                var starterList101 = starterList
+            }
+        })
+
+
     }
 
     private fun getRequestWithParameters() {
@@ -101,12 +121,12 @@ class DashboardFragment : Fragment() {
 //
 ////                    Log.i("url", food_category_thumb)
 ////                    text_view.append(result)
-////                    Glide.with(this)
-////                        .load(food_category_thumb)
-////                        .override(400, 350)
-////                        .fitCenter()
-////                        .fitCenter()
-////                        .into(cat_view0)
+//                    Glide.with(this)
+//                        .load(food_category_thumb)
+//                        .override(400, 350)
+//                        .fitCenter()
+//                        .fitCenter()
+//                        .into(cat_view0)
 //                }
 //            }
 //        })
