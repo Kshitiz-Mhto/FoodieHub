@@ -262,39 +262,15 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <HorizontalScrollView
-        android:layout_width="0dp"
-        android:layout_height="285dp"
-        android:layout_margin="15dp"
-        android:layout_marginStart="30dp"
-        android:scrollbars="none"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dashRecyclerview"
+        android:layout_width="412dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-        app:layout_constraintVertical_bias="0.0">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="380dp"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="1dp">
-
-            <Button
-                android:id="@+id/food1"
-                android:layout_width="381dp"
-                android:layout_height="285dp"
-                android:alpha="0.25"
-                android:color="#DDFAFAFB"
-                app:cornerRadius="17dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
-
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
