@@ -7,9 +7,7 @@
 
 ## Description
 
-<p style="font-size:15px">
-**FoodHub**🔥 A simple Food App where you can explore and find your craving foods details and recipes. It follows MVVM model architecture and build with Android Studio 📱💻, a mobile application for day to day cravings. Roll up and peep this dope app that's got your back when it comes to satisfying your hunger, homie. Let's get those taste buds fired up! 🤤👊
-</p>
+**FoodHub**🔥, A simple Food App where you can explore and find your craving foods details and recipes. It follows MVVM model architecture and build with Android Studio 📱💻, a mobile application for day to day cravings. Roll up and peep this dope app that's got your back when it comes to satisfying your hunger, homie. Let's get those taste buds fired up! 🤤👊
 
 <br>
 
