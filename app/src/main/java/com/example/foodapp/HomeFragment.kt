@@ -16,8 +16,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.NotificationCompat
-import androidx.core.content.ContextCompat.getSystemService
-import androidx.core.content.getSystemService
 import androidx.navigation.findNavController
 import com.example.foodapp.databinding.FragmentHomeBinding
 
