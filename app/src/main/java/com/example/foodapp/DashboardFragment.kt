@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.foodapp.databinding.FragmentDashboardBinding
 import com.example.foodapp.endpoints.CategoryService
 import com.example.foodapp.endpoints.FoodsByCategory
+import com.example.foodapp.endpoints.SearchByName
 import com.example.foodapp.modal.RetrofitInstance
 import com.example.foodapp.modal.foodbycategory.Dessert.Dessert
 import com.example.foodapp.modal.foodbycategory.Dessert.DessertRecyclerViewAdaptor
@@ -42,13 +44,18 @@ import com.example.foodapp.modal.foodbycategory.vegan.Vegan
 import com.example.foodapp.modal.foodbycategory.vegan.VeganRecyclerViewAdaptor
 import com.example.foodapp.modal.foodbycategory.vegetarian.Vegetarian
 import com.example.foodapp.modal.foodbycategory.vegetarian.VegetarianRecyclerViewAdaptor
+import com.example.foodapp.modal.foodbysearch.FoodBySearch
+import com.example.foodapp.modal.foodbysearch.FoodSearchRecyclerViewAdaptor
 import okhttp3.internal.toImmutableList
 import retrofit2.Response
+import java.util.Locale
 
 
 class DashboardFragment : Fragment() {
+
     private lateinit var retService: CategoryService
     private lateinit var retfoodsByCategory: FoodsByCategory
+    private lateinit var retFoodBySearch: SearchByName
     private lateinit var binding: FragmentDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -60,19 +67,58 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        retService = RetrofitInstance.getRetrofitInstance().create(CategoryService::class.java)
-        retfoodsByCategory =
-            RetrofitInstance.getRetrofitInstance().create(FoodsByCategory::class.java)
-        binding = FragmentDashboardBinding.inflate(inflater, container, false)
+        retService = RetrofitInstance.getRetrofitInstance()
+            .create(CategoryService::class.java)
+        retfoodsByCategory = RetrofitInstance.getRetrofitInstance()
+            .create(FoodsByCategory::class.java)
+        retFoodBySearch = RetrofitInstance.getRetrofitInstance()
+            .create(SearchByName::class.java)
+
+        binding = FragmentDashboardBinding.inflate(
+            inflater,
+            container,
+            false
+        )
+
+        binding.root.postDelayed(Runnable {
+            binding.catStarter.performClick()
+        },
+            100)
 
         val recyclerView = binding.dashRecyclerview
         recyclerView.setBackgroundColor(Color.TRANSPARENT)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(
+            requireContext(),
+            LinearLayoutManager.HORIZONTAL,
+            false
+        )
 
-        binding.root.postDelayed(Runnable {
-                binding.catStarter.performClick()
-            },
-            100)
+        binding.dashSearch.setOnQueryTextListener(object :
+            androidx.appcompat.widget.SearchView.OnQueryTextListener,
+            android.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                binding.dashSearch.clearFocus()
+                val searchText = query!!.lowercase(Locale.getDefault())
+                if (searchText.isNotEmpty() or searchText.isNotBlank()){
+                    val responseLiveData: LiveData<Response<FoodBySearch>> = liveData {
+                        val response = retFoodBySearch.getFoodBySearch(searchText)
+                        emit(response)
+                    }
+                    responseLiveData.observe(this@DashboardFragment, Observer {
+                        val foodList = it.body()?.meals?.toImmutableList()
+                        if (foodList != null) {
+                            recyclerView.adapter = FoodSearchRecyclerViewAdaptor(foodList)
+                        }
+                    })
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                return false
+            }
+
+        })
 
         binding.catStarter.setOnClickListener {
             val responseLiveData: LiveData<Response<Starter>> = liveData {
