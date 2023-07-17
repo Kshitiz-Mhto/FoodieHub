@@ -44,12 +44,11 @@ class InfoFragment : Fragment() {
         sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         foodName = sharedPreferences.getString("foodName", "") ?: ""
         foodUrl = sharedPreferences.getString("foodUrl", "") ?: ""
-        Log.i("name", foodName)
-
+//        Log.i("name", foodName)
 
         val responseLiveData: LiveData<Response<FoodBySearch>> = liveData {
             val response = retFoodBySearch.getFoodBySearch(foodName)
-            Log.i("response", response.toString())
+//            Log.i("response", response.toString())
             emit(response)
         }
         responseLiveData.observe(this, Observer {
