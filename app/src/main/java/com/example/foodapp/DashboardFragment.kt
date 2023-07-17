@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
@@ -84,6 +83,8 @@ class DashboardFragment : Fragment() {
             binding.catStarter.performClick()
         },
             100)
+
+        binding
 
         val recyclerView = binding.dashRecyclerview
         recyclerView.setBackgroundColor(Color.TRANSPARENT)
