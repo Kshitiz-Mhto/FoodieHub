@@ -2,7 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="blue">#2196F3</color>
-    <color name="skyblue">#55C8FB</color>
+    <color name="blur">#60FFFFFF</color>
+    <color name="perfectblack">#FF0D1117</color>
+    <color name="perfectbg">#130622</color>
+
 
 </resources>

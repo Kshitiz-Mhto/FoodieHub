@@ -4,10 +4,258 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InfoFragment"
-    android:background="@drawable/info_design"
-    android:scaleType="centerCrop"
     android:layout_margin="0dp"
-    >
+    android:background="@color/white"
+    tools:context=".InfoFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/infoCardView"
+        android:layout_width="match_parent"
+        android:layout_height="396dp"
+        android:layout_marginTop="-35dp"
+        app:cardCornerRadius="48dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/info_desgin">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/etImage"
+                android:layout_width="wrap_content"
+                android:layout_height="234dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="96dp"
+                android:layout_marginTop="108dp"
+                android:layout_marginEnd="96dp"
+                android:layout_marginBottom="54dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tvFood"
+                android:layout_width="227dp"
+                android:layout_height="66dp"
+                android:layout_alignBottom="@+id/etImage"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="227dp"
+                android:autoSizeMaxTextSize="22dp"
+                android:autoSizeMinTextSize="18sp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="cursive"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="#0C0000"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoCardView"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tvEmoji0"
+                    android:layout_width="70dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/fire_emoji" />
+
+                <TextView
+                    android:id="@+id/etEmoji0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="140 Cal"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tvEmoji1"
+                    android:layout_width="70dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/rating_emoji" />
+
+                <TextView
+                    android:id="@+id/etEmoji1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="4.2 👍"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/tvEmoji2"
+                    android:layout_width="70dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="34dp"
+                    android:layout_marginBottom="40dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/wt_emoji" />
+
+                <TextView
+                    android:id="@+id/etEmoji2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="-1dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="120 gm"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/etDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Description"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.693" />
+
+    <TextView
+        android:id="@+id/etDescriptionDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/raleway_semibold"
+        android:gravity="left"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnThankyou"
+        android:layout_width="215dp"
+        android:layout_height="47dp"
+        android:alpha="0.75"
+        android:backgroundTint="@null"
+        android:background="@drawable/curve_bg"
+        android:elevation="12dp"
+        android:gravity="center"
+        android:text="Thank You!!🤗"
+        android:textColor="@color/perfectblack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescriptionDetail"
+        app:layout_constraintVertical_bias="0.723" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
