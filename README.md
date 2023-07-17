@@ -13,11 +13,11 @@
 
 ## Screenshots 
 
-* HomeScreen
+* Home Screen
 
 * Dashboard
 
-* Info_dash
+* Info Dashboard
 
 <br>
 
@@ -26,7 +26,7 @@ Home Screen
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/home_screen101.png" alt="homescreen" width="200" height="380">
+	<img src="app/src/main/res/drawable/home_screenshot.png" alt="homescreen" width="200" height="380">
 </p>
 
 <p align="center">
@@ -34,22 +34,22 @@ Dashboard
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/dashboard.png" alt="dashboard" width="200" height="380">
+	<img src="app/src/main/res/drawable/dash_screenshot.png" alt="dashboard" width="200" height="380">
 </p>
 
 <p align="center">
-SearchByName
+Info Dashboard
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/search_food.png" alt="dashboard" width="200" height="380">
+	<img src="app/src/main/res/drawable/info_screenshot.png" alt="info" width="200" height="380">
 </p>
 
 <br>
 
 ## Used technologies
 
-- Co-routines
+- Co-routines 
 
 - LiveData
 
