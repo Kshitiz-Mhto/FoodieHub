@@ -59,7 +59,7 @@
                 android:textStyle="bold" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/btnBuy"
                 android:layout_width="65dp"
                 android:layout_height="48dp"
                 android:layout_above="@+id/etImage"
