@@ -13,9 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="396dp"
         android:layout_marginTop="-35dp"
+        app:cardBackgroundColor="@android:color/transparent"
         app:cardCornerRadius="48dp"
         app:cardElevation="10dp"
-        app:cardBackgroundColor="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -30,21 +30,21 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/etImage"
-                android:layout_width="wrap_content"
-                android:layout_height="234dp"
+                android:layout_width="246dp"
+                android:layout_height="237dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="96dp"
-                android:layout_marginTop="108dp"
-                android:layout_marginEnd="96dp"
-                android:layout_marginBottom="54dp"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="107dp"
+                android:layout_marginEnd="82dp"
+                android:layout_marginBottom="52dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/ic_launcher_background" />
 
             <TextView
-                android:id="@+id/tvFood"
+                android:id="@+id/etFood"
                 android:layout_width="227dp"
                 android:layout_height="66dp"
                 android:layout_alignBottom="@+id/etImage"
@@ -68,11 +68,12 @@
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="95dp"
         android:layout_marginTop="8dp"
-        android:orientation="horizontal"
         android:background="@android:color/transparent"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -84,6 +85,7 @@
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -97,9 +99,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="31dp"
-                    android:layout_marginTop="17dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="34dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginBottom="49dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/fire_emoji" />
 
@@ -112,9 +114,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="-1dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="50dp"
                     android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="22dp"
                     android:gravity="center"
                     android:text="140 Cal"
                     android:textSize="18sp"
@@ -126,10 +128,12 @@
         <androidx.cardview.widget.CardView
             android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" >
+            android:layout_weight="1">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/tvEmoji1"
                     android:layout_width="70dp"
@@ -138,10 +142,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginEnd="34dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginBottom="50dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/rating_emoji" />
 
@@ -154,9 +158,9 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="-1dp"
-                    android:layout_marginTop="60dp"
+                    android:layout_marginTop="49dp"
                     android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="22dp"
                     android:gravity="center"
                     android:text="4.2 👍"
                     android:textSize="18sp"
@@ -173,6 +177,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/tvEmoji2"
                     android:layout_width="70dp"
@@ -181,10 +186,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="31dp"
-                    android:layout_marginTop="17dp"
-                    android:layout_marginEnd="34dp"
-                    android:layout_marginBottom="40dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_marginBottom="51dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/wt_emoji" />
 
@@ -196,10 +201,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginStart="-1dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginStart="-4dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="22dp"
                     android:gravity="center"
                     android:text="120 gm"
                     android:textSize="18sp"
@@ -209,53 +214,64 @@
         </androidx.cardview.widget.CardView>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/etDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/raleway_semibold"
-        android:text=" Description"
-        android:textAlignment="center"
-        android:textSize="32sp"
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-    <TextView
-        android:id="@+id/etDescriptionDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
-        android:fontFamily="@font/raleway_semibold"
-        android:gravity="left"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescription"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
 
-    <Button
-        android:id="@+id/btnThankyou"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha="0.75"
-        android:background="@drawable/curve_bg"
-        android:backgroundTint="@null"
-        android:elevation="12dp"
-        android:gravity="center"
-        android:text="Thank You!!🤗"
-        android:textColor="@color/perfectblack"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:cornerRadius="13dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etDescriptionDetail"
-        app:layout_constraintVertical_bias="0.723" />
+            <TextView
+                android:id="@+id/etDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_semibold"
+                android:text="Description"
+                android:gravity="center"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/etDescriptionDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_semibold"
+                android:gravity="left"
+                android:textSize="20sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etDescription"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btnThankyou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.75"
+                android:background="@drawable/curve_bg"
+                android:backgroundTint="@null"
+                android:elevation="12dp"
+                android:gravity="center"
+                android:text="Thank You!!🤗"
+                android:textColor="@color/perfectblack"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:cornerRadius="13dp"
+                android:layout_marginTop="8dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
