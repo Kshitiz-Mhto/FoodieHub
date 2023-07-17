@@ -108,7 +108,7 @@ class DashboardFragment : Fragment() {
                     responseLiveData.observe(this@DashboardFragment, Observer {
                         val foodList = it.body()?.meals?.toImmutableList()
                         if (foodList != null) {
-                            recyclerView.adapter = FoodSearchRecyclerViewAdaptor(foodList)
+                            recyclerView.adapter = FoodSearchRecyclerViewAdaptor(foodList, context!!)
                         }
                     })
                 }
@@ -129,7 +129,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = StarterRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = StarterRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -141,7 +141,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = BeefRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = BeefRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -153,7 +153,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = BreakfastRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = BreakfastRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -165,7 +165,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = ChickenRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = ChickenRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -177,7 +177,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = DessertRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = DessertRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -189,7 +189,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = GoatRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = GoatRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -201,7 +201,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = LambRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = LambRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -213,7 +213,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = MiscellaneousRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = MiscellaneousRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -225,7 +225,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = PastaRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = PastaRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -237,7 +237,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = PorkRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = PorkRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -249,7 +249,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = SeafoodRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = SeafoodRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -261,7 +261,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = SidesRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = SidesRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -273,7 +273,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = VeganRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = VeganRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
@@ -285,7 +285,7 @@ class DashboardFragment : Fragment() {
             responseLiveData.observe(this, Observer {
                 val foodList = it.body()?.meals?.toImmutableList()
                 if (foodList != null) {
-                    recyclerView.adapter = VegetarianRecyclerViewAdaptor(foodList)
+                    recyclerView.adapter = VegetarianRecyclerViewAdaptor(foodList, context!!)
                 }
             })
         }
