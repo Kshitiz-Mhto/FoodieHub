@@ -3,11 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dashCategory"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:layout_margin="0dp"
+    android:backgroundTint="@null"
     android:background="@drawable/dash_design"
-    android:scaleType="centerCrop"
     tools:context=".DashboardFragment">
 
     <TextView

@@ -5,18 +5,18 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
-    android:layout_margin="10dp"
-    android:rotationY="-1.2"
+    android:layout_marginStart="50dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
     android:background="@android:color/transparent"
-    >
+    android:rotationY="-1.2">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/foodCard"
         android:layout_width="228dp"
         android:layout_height="288dp"
-        android:layout_marginStart="35dp"
-        app:cardCornerRadius="16dp"
         app:cardBackgroundColor="#40FFFFFF"
+        app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
