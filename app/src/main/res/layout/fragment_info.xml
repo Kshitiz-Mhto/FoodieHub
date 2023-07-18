@@ -26,7 +26,9 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="@drawable/info_desgin">
+            android:background="@drawable/info_desgin"
+            android:alpha=".99"
+            >
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/etImage"
@@ -239,15 +241,21 @@
                 android:gravity="center"
                 android:textSize="32sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/etDescriptionDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/blur"
+                android:alpha=".70"
+                android:backgroundTint="@null"
+                android:elevation="12dp"
                 android:fontFamily="@font/raleway_semibold"
                 android:gravity="left"
                 android:textSize="20sp"
-                android:layout_marginTop="6dp"
-                android:layout_marginStart="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -258,6 +266,8 @@
                 android:id="@+id/btnThankyou"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
                 android:alpha="0.75"
                 android:background="@drawable/curve_bg"
                 android:backgroundTint="@null"
@@ -267,9 +277,7 @@
                 android:textColor="@color/perfectblack"
                 android:textSize="25sp"
                 android:textStyle="bold"
-                app:cornerRadius="13dp"
-                android:layout_marginTop="8dp"
-                />
+                app:cornerRadius="13dp" />
         </LinearLayout>
     </ScrollView>
 
