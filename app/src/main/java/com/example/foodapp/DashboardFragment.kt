@@ -84,8 +84,6 @@ class DashboardFragment : Fragment() {
         },
             100)
 
-        binding
-
         val recyclerView = binding.dashRecyclerview
         recyclerView.setBackgroundColor(Color.TRANSPARENT)
         recyclerView.layoutManager = LinearLayoutManager(
