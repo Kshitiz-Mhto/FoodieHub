@@ -26,7 +26,7 @@ Home Screen
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/home_screenshot.png" alt="homescreen" width="200" height="380">
+	<img src="app/src/main/res/drawable/home_screenshot.png" alt="homescreen" width="210" height="auto">
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@ Dashboard
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/dash_screenshot.png" alt="dashboard" width="200" height="380">
+	<img src="app/src/main/res/drawable/dash_screenshot.png" alt="dashboard" width="200" height="auto">
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@ Info Dashboard
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/info_screenshot.png" alt="info" width="200" height="380">
+	<img src="app/src/main/res/drawable/info_screenshot.png" alt="info" width="200" height="auto">
 </p>
 
 <br>
