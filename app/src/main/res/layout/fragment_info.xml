@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="0dp"
-    android:background="@color/white"
+    android:background="@color/blur"
     tools:context=".InfoFragment">
 
     <androidx.cardview.widget.CardView
@@ -15,6 +14,7 @@
         android:layout_marginTop="-35dp"
         app:cardCornerRadius="48dp"
         app:cardElevation="16dp"
+        android:background="@color/blur"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -25,7 +25,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:alpha=".99"
+            android:background="#1BFFFFFF"
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -73,6 +73,7 @@
         android:layout_height="95dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
+        android:background="@drawable/dash_design"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -171,11 +172,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:background="@color/blur"
             android:layout_weight="1">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/blur"
+                >
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/tvEmoji2"
@@ -246,10 +250,9 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="12dp"
-                android:background="@color/blur"
-                android:alpha=".70"
                 android:backgroundTint="@null"
                 android:elevation="12dp"
+                android:textColor="@color/black"
                 android:fontFamily="@font/raleway_semibold"
                 android:gravity="left"
                 android:textSize="20sp"
@@ -277,6 +280,5 @@
                 app:cornerRadius="13dp" />
         </LinearLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
